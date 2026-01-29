@@ -11,7 +11,7 @@ type Todo struct {
 	Completed bool
 }
 
-func newTodo(text string, completed bool) Todo {
+func makeTodo(text string, completed bool) Todo {
 	return Todo {
 		ID: uuid.New().String(),
 		Text: text,
@@ -20,9 +20,9 @@ func newTodo(text string, completed bool) Todo {
 }
 
 func main() {
-	var i String
+	var i string
 	fmt.Println("What would you like to do today?")
 	fmt.Scanln(&i)
-	t1 := Todo
-	fmt.Println("You input " + todo.Text)
+	t1 := makeTodo(i, false)
+	fmt.Println("You input " + t1.Text)
 }
